@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Brand colors from design */
+  --primary: #6c1725;
+  --primary-container: #8b2e3a;
+  --primary-fixed: #ffdadb;
+  --primary-fixed-dim: #ffb2b7;
+  --on-primary: #ffffff;
+  --on-primary-container: #ffaaaf;
+  
+  /* Surface colors */
+  --background: #fcf9f8;
+  --surface: #fcf9f8;
+  --surface-container: #f0eded;
+  --surface-container-low: #f6f3f2;
+  --surface-container-lowest: #ffffff;
+  --surface-container-high: #eae7e7;
+  
+  /* Text colors */
+  --on-surface: #1b1b1b;
+  --on-surface-variant: #554243;
+  --on-background: #1b1b1b;
+  
+  /* Other colors */
+  --outline: #887272;
+  --outline-variant: #dcc0c1;
+  --secondary: #416372;
+  --tertiary: #003e4b;
+  --error: #ba1a1a;
+  
+  /* Default shadcn tokens */
+  --foreground: var(--on-surface);
+  --card: var(--surface-container-lowest);
+  --card-foreground: var(--on-surface);
+  --popover: var(--surface-container-lowest);
+  --popover-foreground: var(--on-surface);
+  --primary-foreground: var(--on-primary);
+  --secondary-foreground: #ffffff;
+  --muted: var(--surface-container);
+  --muted-foreground: var(--on-surface-variant);
+  --accent: var(--surface-container-low);
+  --accent-foreground: var(--on-surface);
+  --destructive: var(--error);
+  --destructive-foreground: #ffffff;
+  --border: var(--outline-variant);
+  --input: var(--outline-variant);
+  --ring: var(--primary);
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Geist', sans-serif;
+  --font-headline: 'Manrope', 'Geist', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-[var(--background)] text-[var(--on-surface)] font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+  }
+}
