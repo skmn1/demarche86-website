@@ -27,11 +27,10 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-[#fcf9f8]/95 backdrop-blur-xl shadow-sm' 
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-[#fcf9f8]/95 backdrop-blur-xl shadow-sm'
         : 'bg-[#fcf9f8]/90 backdrop-blur-xl'
-    }`}>
+      }`}>
       <div className="flex justify-between items-center px-6 md:px-10 py-4 md:py-6 w-full max-w-full mx-auto">
         <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <Image
@@ -42,10 +41,10 @@ export default function Navbar() {
             className="h-10 w-auto"
           />
           <span className="text-xl font-extrabold tracking-tight text-[#8B2E3A] font-[var(--font-manrope)]">
-            Laila Rezzougui
+            Laïla Rezzougui
           </span>
         </a>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6 items-center">
           {navLinks.map((link) => (

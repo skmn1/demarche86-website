@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-start px-6 md:px-20 py-16 gap-12 max-w-full mx-auto">
         <div className="flex flex-col max-w-sm">
           <span className="text-lg font-bold text-white mb-4 block font-[var(--font-manrope)]">
-            Laila Rezzougui
+            Laïla Rezzougui
           </span>
           <p className="text-sm leading-relaxed text-[#f9ecee]/80 mb-6">
             {t('description')}
