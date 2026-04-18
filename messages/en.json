@@ -1,0 +1,86 @@
+{
+  "Navbar": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "contact": "Contact",
+    "cta": "Book an Appointment",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Hero": {
+    "badge": "Services from 5 €",
+    "title": "Need help with your administrative paperwork?",
+    "description": "I help you fill out your forms, understand your mail, and assert your rights. Simple, fast, and jargon-free assistance.",
+    "callNow": "Call Now",
+    "viewServices": "View Services",
+    "tag1": "Independent",
+    "tag2": "From 5€",
+    "tag3": "Jargon-free",
+    "tag4": "In Poitiers"
+  },
+  "Services": {
+    "title": "What I Do For You",
+    "subtitle": "Tailored support to simplify your daily life and your interactions with government agencies.",
+    "service1Title": "Fill Out Your Forms",
+    "service1Desc": "Help with preparing files and completing complex administrative forms.",
+    "service2Title": "Track Your Cases",
+    "service2Desc": "Monitor the progress of your requests and follow up with relevant organizations.",
+    "service3Title": "Online Procedures",
+    "service3Desc": "Assistance with your declarations and applications on government platforms (CAF, taxes, Ameli...).",
+    "service4Title": "Find the Right Service",
+    "service4Desc": "Guidance to the right contacts and structures suited to your specific situation.",
+    "service5Title": "Call Administrations",
+    "service5Desc": "Phone contact with public services to resolve a situation or obtain information.",
+    "service6Title": "Explain Your Letters",
+    "service6Desc": "Translation of complex administrative letters into plain language and help with drafting responses."
+  },
+  "HowItWorks": {
+    "title": "How Does It Work?",
+    "subtitle": "A simple and transparent process designed to help you quickly.",
+    "step1Title": "Contact Me",
+    "step1Desc": "By phone or message, briefly explain your needs.",
+    "step2Title": "We Assess Together",
+    "step2Desc": "We evaluate the situation together and I propose a tailored and priced solution.",
+    "step3Title": "I Handle It",
+    "step3Desc": "I take care of the procedures. You are informed at every important step."
+  },
+  "Pricing": {
+    "title": "Pricing For Everyone",
+    "subtitle": "Transparent and affordable prices so that administrative help is not a luxury.",
+    "badge": "Basic Rate",
+    "price": "Starting at 5 €",
+    "perUnit": "/ simple procedure",
+    "description": "A clear and free quote will always be provided before any intervention. No surprises.",
+    "cta": "Contact Me for a Free Quote",
+    "feature1Title": "Form Assistance",
+    "feature1Desc": "Simple forms (CAF, CPAM...)",
+    "feature2Title": "Letter Drafting",
+    "feature2Desc": "Standard or simple personalized letter",
+    "feature3Title": "Administrative Call",
+    "feature3Desc": "Contact on your behalf",
+    "feature4Title": "Complex Cases",
+    "feature4Desc": "Quote based on estimated time"
+  },
+  "Contact": {
+    "title": "Contact Me",
+    "subtitle": "Feel free to reach out for any questions or to schedule an initial assessment appointment.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Hours",
+    "hoursValue": "By appointment only",
+    "hoursExtra": "Contact me to schedule a time slot",
+    "cta": "Book an Appointment",
+    "mapLabel": "Poitiers and surroundings"
+  },
+  "Footer": {
+    "description": "Independent Social Worker. Support with your daily administrative procedures.",
+    "copyright": "© 2024 Laïla Rezzougui - Independent Social Worker.",
+    "siret": "SIRET 529 362 741 000 25",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "legalNotice": "Legal Notice",
+    "privacy": "Privacy"
+  }
+}
