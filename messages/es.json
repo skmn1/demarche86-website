@@ -1,0 +1,86 @@
+{
+  "Navbar": {
+    "services": "Servicios",
+    "pricing": "Tarifas",
+    "howItWorks": "Cómo funciona",
+    "contact": "Contacto",
+    "cta": "Pedir cita",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "Hero": {
+    "badge": "Trámites desde 5 €",
+    "title": "¿Necesita ayuda con sus trámites administrativos?",
+    "description": "Le acompaño para rellenar sus papeles, entender sus cartas y hacer valer sus derechos. Una ayuda sencilla, rápida y sin jerga.",
+    "callNow": "Llamar ahora",
+    "viewServices": "Ver servicios",
+    "tag1": "Independiente",
+    "tag2": "Tarifas desde 5€",
+    "tag3": "Sin jerga",
+    "tag4": "En Poitiers"
+  },
+  "Services": {
+    "title": "Lo que hago por usted",
+    "subtitle": "Un acompañamiento personalizado para simplificar su vida cotidiana y sus relaciones con las administraciones.",
+    "service1Title": "Rellenar sus papeles",
+    "service1Desc": "Ayuda en la constitución de expedientes y cumplimentación de formularios administrativos complejos.",
+    "service2Title": "Seguir sus expedientes",
+    "service2Desc": "Verificación del avance de sus solicitudes y seguimiento con los organismos correspondientes.",
+    "service3Title": "Trámites en línea",
+    "service3Desc": "Asistencia para sus declaraciones y solicitudes en las plataformas gubernamentales (CAF, impuestos, Ameli...).",
+    "service4Title": "Encontrar el servicio adecuado",
+    "service4Desc": "Orientación hacia los interlocutores y estructuras adaptados a su situación específica.",
+    "service5Title": "Llamar a las administraciones",
+    "service5Desc": "Contacto telefónico con los servicios públicos para desbloquear una situación u obtener información.",
+    "service6Title": "Explicar sus cartas",
+    "service6Desc": "Traducción en lenguaje claro de las cartas administrativas complejas y ayuda en la redacción de respuestas."
+  },
+  "HowItWorks": {
+    "title": "¿Cómo funciona?",
+    "subtitle": "Un proceso sencillo y transparente, diseñado para aliviarle rápidamente.",
+    "step1Title": "Contácteme",
+    "step1Desc": "Por teléfono o mensaje, explíqueme brevemente su necesidad.",
+    "step2Title": "Evaluamos juntos",
+    "step2Desc": "Evaluamos juntos la situación y le propongo una solución adaptada y presupuestada.",
+    "step3Title": "Me encargo",
+    "step3Desc": "Me hago cargo de los trámites. Estará informado en cada etapa importante."
+  },
+  "Pricing": {
+    "title": "Tarifas pensadas para todos",
+    "subtitle": "Precios transparentes y accesibles para que la ayuda administrativa no sea un lujo.",
+    "badge": "Tarifa base",
+    "price": "Desde 5 €",
+    "perUnit": "/ trámite sencillo",
+    "description": "Siempre se le propondrá un presupuesto claro y gratuito antes de cualquier intervención. Sin sorpresas.",
+    "cta": "Contactar para un presupuesto gratuito",
+    "feature1Title": "Ayuda en cumplimentación",
+    "feature1Desc": "Formularios sencillos (CAF, CPAM...)",
+    "feature2Title": "Redacción de cartas",
+    "feature2Desc": "Carta tipo o personalizada sencilla",
+    "feature3Title": "Llamada administrativa",
+    "feature3Desc": "Contacto en su nombre",
+    "feature4Title": "Expedientes complejos",
+    "feature4Desc": "Según presupuesto y tiempo estimado"
+  },
+  "Contact": {
+    "title": "Contactarme",
+    "subtitle": "No dude en contactarme para cualquier pregunta o para concertar una primera cita de evaluación.",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Correo electrónico",
+    "hours": "Horarios",
+    "hoursValue": "Solo con cita previa",
+    "hoursExtra": "Contácteme para acordar una hora",
+    "cta": "Pedir cita",
+    "mapLabel": "Poitiers y alrededores"
+  },
+  "Footer": {
+    "description": "Asistente Social Independiente. Acompañamiento en sus trámites administrativos del día a día.",
+    "copyright": "© 2024 Laïla Rezzougui - Asistente Social Independiente.",
+    "siret": "SIRET 529 362 741 000 25",
+    "navigation": "Navegación",
+    "legal": "Legal",
+    "legalNotice": "Aviso Legal",
+    "privacy": "Privacidad"
+  }
+}

@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Manrope } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages, setRequestLocale } from 'next-intl/server'
+import { notFound } from 'next/navigation'
+import { routing } from '@/i18n/routing'
 import './globals.css'
 
 const inter = Inter({ 
@@ -44,15 +48,37 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
+type Props = {
   children: React.ReactNode
-}>) {
+  params: Promise<{ locale: string }>
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params
+
+  if (!routing.locales.includes(locale as typeof routing.locales[number])) {
+    notFound()
+  }
+
+  setRequestLocale(locale)
+
+  const messages = await getMessages()
+  const isRTL = locale === 'ar'
+
   return (
-    <html lang="fr" className={`${inter.variable} ${manrope.variable} bg-[#fcf9f8]`}>
+    <html 
+      lang={locale} 
+      dir={isRTL ? 'rtl' : 'ltr'}
+      className={`${inter.variable} ${manrope.variable} bg-[#fcf9f8]`}
+    >
       <body className="font-sans antialiased">
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

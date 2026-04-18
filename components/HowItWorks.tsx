@@ -1,31 +1,37 @@
-const steps = [
-  {
-    number: 1,
-    title: 'Contactez-moi',
-    description: 'Par téléphone ou par message, expliquez-moi brièvement votre besoin.',
-  },
-  {
-    number: 2,
-    title: 'On fait le point',
-    description: 'Nous évaluons ensemble la situation et je vous propose une solution adaptée et chiffrée.',
-  },
-  {
-    number: 3,
-    title: 'Je m\'en occupe',
-    description: 'Je prends en charge les démarches. Vous êtes informé à chaque étape importante.',
-  },
-]
+"use client"
+
+import { useTranslations } from 'next-intl'
 
 export default function HowItWorks() {
+  const t = useTranslations('HowItWorks')
+
+  const steps = [
+    {
+      number: 1,
+      title: t('step1Title'),
+      description: t('step1Desc'),
+    },
+    {
+      number: 2,
+      title: t('step2Title'),
+      description: t('step2Desc'),
+    },
+    {
+      number: 3,
+      title: t('step3Title'),
+      description: t('step3Desc'),
+    },
+  ]
+
   return (
     <section id="comment-ca-marche" className="py-24 lg:py-32 bg-[#f6f3f2] px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-24 text-center max-w-2xl mx-auto">
           <h2 className="font-[var(--font-manrope)] text-3xl md:text-4xl font-extrabold text-[#1b1b1b] mb-4">
-            Comment ça se passe?
+            {t('title')}
           </h2>
           <p className="text-[#554243] text-lg">
-            Un processus simple et transparent, conçu pour vous soulager rapidement.
+            {t('subtitle')}
           </p>
         </div>
         

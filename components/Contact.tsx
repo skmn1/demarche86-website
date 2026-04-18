@@ -1,47 +1,51 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react'
-import Image from 'next/image'
+"use client"
 
-const contactInfo = [
-  {
-    icon: MapPin,
-    title: 'Adresse',
-    content: '31 avenue Robert Schuman',
-    extra: '86000 Poitiers',
-    href: null,
-  },
-  {
-    icon: Phone,
-    title: 'Téléphone',
-    content: '06 62 37 18 18',
-    extra: null,
-    href: 'tel:0662371818',
-  },
-  {
-    icon: Mail,
-    title: 'Email',
-    content: 'contact@lailarezzougui.fr',
-    extra: null,
-    href: 'mailto:contact@lailarezzougui.fr',
-  },
-  {
-    icon: Clock,
-    title: 'Horaires',
-    content: 'Sur rendez-vous uniquement',
-    extra: 'Contactez-moi pour convenir d\'un créneau',
-    href: null,
-  },
-]
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function Contact() {
+  const t = useTranslations('Contact')
+
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: t('address'),
+      content: '31 avenue Robert Schuman',
+      extra: '86000 Poitiers',
+      href: null,
+    },
+    {
+      icon: Phone,
+      title: t('phone'),
+      content: '06 62 37 18 18',
+      extra: null,
+      href: 'tel:0662371818',
+    },
+    {
+      icon: Mail,
+      title: t('email'),
+      content: 'laila.rezzougui@demarches86.fr',
+      extra: null,
+      href: 'mailto:laila.rezzougui@demarches86.fr',
+    },
+    {
+      icon: Clock,
+      title: t('hours'),
+      content: t('hoursValue'),
+      extra: t('hoursExtra'),
+      href: null,
+    },
+  ]
+
   return (
     <section id="contact" className="py-24 lg:py-32 bg-white px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-24 md:w-2/3 lg:w-1/2">
           <h2 className="font-[var(--font-manrope)] text-3xl md:text-4xl font-extrabold text-[#1b1b1b] mb-4">
-            Me contacter
+            {t('title')}
           </h2>
           <p className="text-[#554243] text-lg">
-            N&apos;hésitez pas à me joindre pour toute question ou pour prendre un premier rendez-vous d&apos;évaluation.
+            {t('subtitle')}
           </p>
         </div>
         
@@ -83,7 +87,7 @@ export default function Contact() {
                 href="tel:0662371818"
                 className="inline-flex items-center justify-center gap-2 bg-[#6c1725] text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-[#8b2e3a] transition-colors w-full sm:w-auto"
               >
-                Prendre rendez-vous
+                {t('cta')}
               </a>
             </div>
           </div>
@@ -97,13 +101,13 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localisation à Poitiers"
+              title="Localisation"
               className="grayscale opacity-80"
             />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="bg-white/90 backdrop-blur-sm px-6 py-4 rounded-xl flex items-center gap-3">
                 <MapPin className="w-6 h-6 text-[#6c1725]" style={{ fill: '#ffdadb' }} />
-                <span className="font-[var(--font-manrope)] font-bold text-[#1b1b1b]">Poitiers et environs</span>
+                <span className="font-[var(--font-manrope)] font-bold text-[#1b1b1b]">{t('mapLabel')}</span>
               </div>
             </div>
           </div>
