@@ -15,7 +15,7 @@ export default function Footer() {
             SIRET 123 456 789 00010
           </p>
         </div>
-        
+
         <div className="flex flex-col md:flex-row gap-12 md:gap-24">
           <div className="flex flex-col gap-4">
             <h4 className="font-semibold text-white mb-2">Navigation</h4>
@@ -29,7 +29,7 @@ export default function Footer() {
               Contact
             </a>
           </div>
-          
+
           <div className="flex flex-col gap-4">
             <h4 className="font-semibold text-white mb-2">Légal</h4>
             <a href="#" className="text-[#f9ecee]/70 hover:text-white transition-opacity text-sm leading-relaxed">
@@ -38,9 +38,6 @@ export default function Footer() {
             <a href="#" className="text-[#f9ecee]/70 hover:text-white transition-opacity text-sm leading-relaxed">
               Confidentialité
             </a>
-            <span className="text-[#f9ecee]/50 text-xs leading-relaxed mt-4 italic">
-              Ne pas jeter sur la voie publique
-            </span>
           </div>
         </div>
       </div>
