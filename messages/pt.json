@@ -1,0 +1,86 @@
+{
+  "Navbar": {
+    "services": "Serviços",
+    "pricing": "Tarifas",
+    "howItWorks": "Como funciona",
+    "contact": "Contato",
+    "cta": "Marcar consulta",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "Hero": {
+    "badge": "Procedimentos a partir de 5 €",
+    "title": "Precisa de ajuda com os seus procedimentos administrativos?",
+    "description": "Acompanho-o para preencher os seus papéis, compreender as suas cartas e fazer valer os seus direitos. Uma ajuda simples, rápida e sem jargão.",
+    "callNow": "Ligar agora",
+    "viewServices": "Ver serviços",
+    "tag1": "Independente",
+    "tag2": "Tarifas desde 5€",
+    "tag3": "Sem jargão",
+    "tag4": "Em Poitiers"
+  },
+  "Services": {
+    "title": "O que faço por si",
+    "subtitle": "Um acompanhamento personalizado para simplificar a sua vida quotidiana e as suas relações com as administrações.",
+    "service1Title": "Preencher os seus papéis",
+    "service1Desc": "Ajuda na constituição de processos e preenchimento de formulários administrativos complexos.",
+    "service2Title": "Acompanhar os seus processos",
+    "service2Desc": "Verificação do andamento dos seus pedidos e acompanhamento junto dos organismos competentes.",
+    "service3Title": "Procedimentos online",
+    "service3Desc": "Assistência para as suas declarações e pedidos nas plataformas governamentais (CAF, impostos, Ameli...).",
+    "service4Title": "Encontrar o serviço certo",
+    "service4Desc": "Orientação para os interlocutores e estruturas adaptados à sua situação específica.",
+    "service5Title": "Ligar às administrações",
+    "service5Desc": "Contacto telefónico com os serviços públicos para desbloquear uma situação ou obter informações.",
+    "service6Title": "Explicar as suas cartas",
+    "service6Desc": "Tradução em linguagem clara das cartas administrativas complexas e ajuda na redação de respostas."
+  },
+  "HowItWorks": {
+    "title": "Como funciona?",
+    "subtitle": "Um processo simples e transparente, concebido para o aliviar rapidamente.",
+    "step1Title": "Contacte-me",
+    "step1Desc": "Por telefone ou mensagem, explique-me brevemente a sua necessidade.",
+    "step2Title": "Avaliamos juntos",
+    "step2Desc": "Avaliamos juntos a situação e proponho-lhe uma solução adaptada e orçamentada.",
+    "step3Title": "Eu trato disso",
+    "step3Desc": "Encarrego-me dos procedimentos. Será informado em cada etapa importante."
+  },
+  "Pricing": {
+    "title": "Tarifas pensadas para todos",
+    "subtitle": "Preços transparentes e acessíveis para que a ajuda administrativa não seja um luxo.",
+    "badge": "Tarifa base",
+    "price": "A partir de 5 €",
+    "perUnit": "/ procedimento simples",
+    "description": "Será sempre proposto um orçamento claro e gratuito antes de qualquer intervenção. Sem surpresas.",
+    "cta": "Contactar para um orçamento gratuito",
+    "feature1Title": "Ajuda no preenchimento",
+    "feature1Desc": "Formulários simples (CAF, CPAM...)",
+    "feature2Title": "Redação de cartas",
+    "feature2Desc": "Carta tipo ou personalizada simples",
+    "feature3Title": "Chamada administrativa",
+    "feature3Desc": "Contacto em seu nome",
+    "feature4Title": "Processos complexos",
+    "feature4Desc": "Segundo orçamento e tempo estimado"
+  },
+  "Contact": {
+    "title": "Contactar-me",
+    "subtitle": "Não hesite em contactar-me para qualquer questão ou para marcar uma primeira consulta de avaliação.",
+    "address": "Morada",
+    "phone": "Telefone",
+    "email": "Email",
+    "hours": "Horários",
+    "hoursValue": "Apenas com marcação",
+    "hoursExtra": "Contacte-me para combinar um horário",
+    "cta": "Marcar consulta",
+    "mapLabel": "Poitiers e arredores"
+  },
+  "Footer": {
+    "description": "Assistente Social Independente. Acompanhamento nos seus procedimentos administrativos do dia a dia.",
+    "copyright": "© 2024 Laïla Rezzougui - Assistente Social Independente.",
+    "siret": "SIRET 529 362 741 000 25",
+    "navigation": "Navegação",
+    "legal": "Legal",
+    "legalNotice": "Avisos Legais",
+    "privacy": "Privacidade"
+  }
+}
