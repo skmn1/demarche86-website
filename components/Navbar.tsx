@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import LanguageSwitcher from './LanguageSwitcher'
@@ -32,8 +33,17 @@ export default function Navbar() {
         : 'bg-[#fcf9f8]/90 backdrop-blur-xl'
     }`}>
       <div className="flex justify-between items-center px-6 md:px-10 py-4 md:py-6 w-full max-w-full mx-auto">
-        <a href="#" className="text-xl font-extrabold tracking-tight text-[#8B2E3A] hover:opacity-80 transition-opacity font-[var(--font-manrope)]">
-          Laila Rezzougui
+        <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <Image
+            src="/images/logo.png"
+            alt="Laila Rezzougui"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+          />
+          <span className="text-xl font-extrabold tracking-tight text-[#8B2E3A] font-[var(--font-manrope)]">
+            Laila Rezzougui
+          </span>
         </a>
         
         {/* Desktop Navigation */}
