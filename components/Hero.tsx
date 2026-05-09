@@ -10,7 +10,21 @@ export default function Hero() {
   return (
     <section className="hero">
 
-      {/* ── Text content ── */}
+      {/* ── LAYER 2: Avatar — transparent PNG, anchored bottom-right ── */}
+      {/* The section's background-color #8B2035 acts as the avatar's bg — no box needed */}
+      <div className="hero-avatar-wrap">
+        {/* Using next/image unoptimized fill-like approach inside a positioned container */}
+        <Image
+          src="/images/laila-avatar.png"
+          alt="Portrait illustré de Laïla Rezzougui, assistante administrative indépendante"
+          fill
+          className="!object-contain !object-bottom"
+          priority
+          sizes="(max-width: 640px) 80vw, (max-width: 1024px) 65vw, 58vw"
+        />
+      </div>
+
+      {/* ── LAYER 3: Text content — floats above avatar ── */}
       <div className="hero-content">
 
         {/* Badge */}
@@ -43,20 +57,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Avatar — absolute, bottom-right ── */}
-      {/* .hero-avatar-wrap responsive sizing is in globals.css */}
-      <div className="hero-avatar-wrap">
-        <Image
-          src="/images/laila-avatar.png"
-          alt="Portrait illustré de Laïla Rezzougui, assistante administrative indépendante"
-          fill
-          className="object-contain object-bottom"
-          priority
-          sizes="(max-width: 640px) 48vw, (max-width: 1024px) 40vw, 460px"
-        />
-      </div>
-
-      {/* ── Trust badge bar — pinned to hero bottom ── */}
+      {/* ── LAYER 3: Trust badge bar — pinned to hero bottom ── */}
       <div className="hero-badges">
         <div className="flex items-center gap-1.5 text-sm text-[#ffdadb]">
           <CheckCircle className="w-4 h-4 shrink-0 text-[#ffaaaf]" style={{ fill: '#ffaaaf', stroke: '#6c1725' }} />
