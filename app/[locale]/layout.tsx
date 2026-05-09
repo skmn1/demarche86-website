@@ -20,8 +20,24 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Laïla Rezzougui — Assistante Sociale Indépendante à Poitiers',
-  description: 'Aide pour vos démarches administratives à Poitiers. Remplissage de formulaires, suivi de dossiers, démarches en ligne. À partir de 5€.',
+  title: 'Laïla Rezzougui — Assistance administrative à Poitiers',
+  description: 'Je vous aide à remplir vos formulaires, comprendre vos courriers et faire valoir vos droits. Sans jargon, à partir de 5 €.',
+  openGraph: {
+    type: 'website',
+    url: 'https://demarches86.fr',
+    siteName: 'Démarches 86',
+    title: 'Laïla Rezzougui — Assistance administrative à Poitiers',
+    description: 'Je vous aide à remplir vos formulaires, comprendre vos courriers et faire valoir vos droits. Sans jargon, à partir de 5 €.',
+    locale: 'fr_FR',
+    alternateLocale: ['en_GB', 'ar_MA', 'es_ES', 'pt_PT'],
+    images: [{ url: 'https://demarches86.fr/og-image.jpg', width: 1200, height: 630, alt: 'Laïla Rezzougui — Assistance administrative' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Laïla Rezzougui — Assistance administrative à Poitiers',
+    description: 'Je vous aide à remplir vos formulaires et faire valoir vos droits. À partir de 5 €.',
+    images: ['https://demarches86.fr/og-image.jpg'],
+  },
   generator: 'v0.app',
   icons: {
     icon: [

@@ -1,78 +1,73 @@
 "use client"
 
-import Image from 'next/image'
 import { Phone, Euro, CheckCircle, MapPin } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 export default function Hero() {
   const t = useTranslations('Hero')
-  
+
   return (
-    <section className="bg-[#9f3d49] text-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20 lg:py-32 flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
-        <div className="lg:w-1/2 flex flex-col items-start z-10">
-          <div className="inline-flex items-center gap-2 bg-[#6c1725] text-white px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-            <Euro className="w-4 h-4" />
-            {t('badge')}
-          </div>
-          
-          <h1 className="font-[var(--font-manrope)] text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight mb-6 text-balance">
-            {t('title')}
-          </h1>
-          
-          <p className="text-lg lg:text-xl text-[#ffdadb] mb-10 leading-relaxed max-w-xl">
-            {t('description')}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a
-              href="tel:0662371818"
-              className="inline-flex items-center justify-center gap-2 bg-white text-[#6c1725] font-bold text-base px-8 py-4 rounded-xl hover:bg-[#f6f3f2] transition-colors w-full sm:w-auto"
-            >
-              <Phone className="w-5 h-5" style={{ fill: 'currentColor' }} />
-              {t('callNow')} — 06 62 37 18 18
-            </a>
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center gap-2 bg-[#6c1725] text-white font-semibold text-base px-8 py-4 rounded-xl hover:bg-[#802633] transition-colors w-full sm:w-auto"
-            >
-              {t('viewServices')}
-            </a>
-          </div>
-          
-          <div className="mt-12 flex flex-wrap gap-6 text-sm text-[#ffdadb]">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-[#ffaaaf]" style={{ fill: '#ffaaaf', stroke: '#6c1725' }} />
-              {t('tag1')}
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-[#ffaaaf]" style={{ fill: '#ffaaaf', stroke: '#6c1725' }} />
-              {t('tag2')}
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-[#ffaaaf]" style={{ fill: '#ffaaaf', stroke: '#6c1725' }} />
-              {t('tag3')}
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-[#ffaaaf]" />
-              {t('tag4')}
-            </div>
-          </div>
+    <section className="hero">
+
+      {/* LAYER 1 — Avatar on section background (#8B2035) */}
+      <div className="hero-avatar-wrap">
+        <img
+          className="hero-avatar"
+          src="/images/laila-avatar.png"
+          alt="Portrait illustré de Laïla Rezzougui, assistante administrative indépendante"
+        />
+      </div>
+
+      {/* LAYER 2 — Text panel with its own darker background */}
+      <div className="hero-content">
+
+        <div className="hero-badge">
+          <Euro className="w-3 h-3 inline" style={{ verticalAlign: 'middle' }} />
+          {' '}{t('badge')}
         </div>
-        
-        <div className="lg:w-1/2 w-full max-w-md mx-auto relative z-10">
-          <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-[#6c1725] relative">
-            <Image
-              src="/images/laila.jpg"
-              alt="Portrait de Laila Rezzougui, assistante sociale indépendante"
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+
+        <h1 className="hero-title">
+          {t('title')}
+        </h1>
+
+        <p className="hero-desc">
+          {t('description')}
+        </p>
+
+        <div className="hero-buttons">
+          <a className="btn-call" href="tel:0662371818">
+            <Phone className="w-4 h-4 shrink-0" style={{ fill: 'currentColor' }} />
+            <span className="btn-label">{t('callNow')}</span>
+            <span className="btn-sep"> — </span>
+            <span className="btn-number">06 62 37 18 18</span>
+          </a>
+          <a className="btn-services" href="#services">
+            {t('viewServices')}
+          </a>
+        </div>
+
+      </div>
+
+      {/* LAYER 3 — Trust badge bar pinned to bottom */}
+      <div className="hero-badges">
+        <div className="flex items-center gap-1.5">
+          <CheckCircle className="w-3.5 h-3.5 shrink-0" style={{ fill: '#ffaaaf', stroke: '#6c1725' }} />
+          <span>{t('tag1')}</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <CheckCircle className="w-3.5 h-3.5 shrink-0" style={{ fill: '#ffaaaf', stroke: '#6c1725' }} />
+          <span>{t('tag2')}</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <CheckCircle className="w-3.5 h-3.5 shrink-0" style={{ fill: '#ffaaaf', stroke: '#6c1725' }} />
+          <span>{t('tag3')}</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <MapPin className="w-3.5 h-3.5 shrink-0" style={{ color: '#ffaaaf' }} />
+          <span>{t('tag4')}</span>
         </div>
       </div>
+
     </section>
   )
 }
