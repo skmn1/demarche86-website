@@ -20,17 +20,20 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Laïla Rezzougui — Assistante Sociale Indépendante à Poitiers',
-  description: 'Aide pour vos démarches administratives à Poitiers. Remplissage de formulaires, suivi de dossiers, démarches en ligne. À partir de 5€.',
+  title: 'Laïla Rezzougui – Administrative Assistance in Poitiers',
+  description:
+    'I help you fill out your forms, understand your mail, and assert your rights. Simple, fast, and jargon-free. Services from 5€. Based in Poitiers.',
   generator: 'v0.app',
   icons: {
     icon: [
       {
         url: '/icon-light-32x32.png',
+        sizes: '32x32',
         media: '(prefers-color-scheme: light)',
       },
       {
         url: '/icon-dark-32x32.png',
+        sizes: '32x32',
         media: '(prefers-color-scheme: dark)',
       },
       {
@@ -38,7 +41,38 @@ export const metadata: Metadata = {
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: {
+      url: '/apple-icon.png',
+      sizes: '180x180',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://demarches86.fr/en',
+    siteName: 'Demarches 86',
+    title: 'Laïla Rezzougui – Administrative Assistance in Poitiers',
+    description:
+      'I help you fill out your forms, understand your mail, and assert your rights. Simple, fast, jargon-free. From 5€.',
+    images: [
+      {
+        url: 'https://demarches86.fr/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Laïla Rezzougui – Administrative Assistance in Poitiers',
+      },
+    ],
+    locale: 'en_GB',
+    alternateLocale: ['fr_FR', 'ar_MA', 'es_ES', 'pt_PT'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Laïla Rezzougui – Administrative Assistance in Poitiers',
+    description:
+      'I help you fill out your forms, understand your mail, and assert your rights. From 5€.',
+    images: ['https://demarches86.fr/og-image.jpg'],
+  },
+  other: {
+    'og:site_name': 'Demarches 86',
   },
 }
 
