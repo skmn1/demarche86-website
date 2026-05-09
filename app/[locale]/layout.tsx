@@ -20,17 +20,19 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Laïla Rezzougui — Assistante Sociale Indépendante à Poitiers',
-  description: 'Aide pour vos démarches administratives à Poitiers. Remplissage de formulaires, suivi de dossiers, démarches en ligne. À partir de 5€.',
+  title: 'Laïla Rezzougui — Assistance administrative à Poitiers',
+  description: "Je vous aide à remplir vos formulaires, comprendre votre courrier et faire valoir vos droits. Simple, rapide, sans jargon. À partir de 5€. Basé à Poitiers.",
   generator: 'v0.app',
   icons: {
     icon: [
       {
         url: '/icon-light-32x32.png',
+        sizes: '32x32',
         media: '(prefers-color-scheme: light)',
       },
       {
         url: '/icon-dark-32x32.png',
+        sizes: '32x32',
         media: '(prefers-color-scheme: dark)',
       },
       {
@@ -38,7 +40,33 @@ export const metadata: Metadata = {
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: {
+      url: '/apple-icon.png',
+      sizes: '180x180',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://demarches86.fr',
+    siteName: 'Démarches 86',
+    title: 'Laïla Rezzougui — Assistance administrative à Poitiers',
+    description: "Je vous aide à remplir vos formulaires, comprendre votre courrier et faire valoir vos droits. Simple, rapide, sans jargon. À partir de 5€.",
+    images: [
+      {
+        url: 'https://demarches86.fr/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Laïla Rezzougui — Assistance administrative à Poitiers',
+      },
+    ],
+    locale: 'fr_FR',
+    alternateLocale: ['en_GB', 'ar_MA', 'es_ES', 'pt_PT'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Laïla Rezzougui — Assistance administrative à Poitiers',
+    description: "Je vous aide à remplir vos formulaires, comprendre votre courrier et faire valoir vos droits. À partir de 5€.",
+    images: ['https://demarches86.fr/og-image.jpg'],
   },
 }
 

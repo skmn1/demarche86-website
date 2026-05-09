@@ -86,6 +86,41 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ── Hero avatar responsive positioning ── */
+.hero-avatar-wrap {
+  position: absolute;
+  bottom: 0;
+  right: -5%;
+  height: 85%;
+  max-width: 55vw;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .hero-avatar-wrap {
+    right: 0;
+    height: 90%;
+    max-width: 42vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-avatar-wrap {
+    right: 2%;
+    height: 100%;
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-avatar-wrap {
+    right: 4%;
+    max-width: 560px;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
