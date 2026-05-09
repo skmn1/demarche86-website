@@ -38,7 +38,7 @@ export default function LanguageSwitcher() {
         aria-haspopup="listbox"
       >
         <Globe className="w-4 h-4" />
-        <span className="hidden sm:inline">{locale.toUpperCase()}</span>
+        <span>{locale.toUpperCase()}</span>
         <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
