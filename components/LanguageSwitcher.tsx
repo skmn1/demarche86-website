@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-[#5e4f4f] hover:text-[#6c1725] transition-colors duration-200 font-[var(--font-manrope)] text-sm tracking-tight font-medium px-3 py-2 rounded-lg hover:bg-[#f0eded]"
+        className="flex items-center gap-2 text-[var(--ink-soft)] hover:text-[var(--folder)] transition-colors text-sm font-medium px-3 py-2 rounded-md hover:bg-[var(--surface-container-low)]"
         aria-label="Changer de langue"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
@@ -43,8 +43,8 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div 
-          className="absolute top-full right-0 mt-2 bg-white rounded-xl shadow-lg border border-[#dcc0c1] py-2 min-w-[140px] z-50"
+        <div
+          className="absolute top-full right-0 mt-2 bg-[var(--paper-lowest)] rounded-md shadow-lg border border-[var(--line)] py-2 min-w-[140px] z-50"
           role="listbox"
           aria-label="Langues disponibles"
         >
@@ -52,10 +52,10 @@ export default function LanguageSwitcher() {
             <button
               key={loc}
               onClick={() => handleLocaleChange(loc)}
-              className={`w-full text-start px-4 py-2.5 text-sm font-[var(--font-manrope)] transition-colors ${
-                locale === loc 
-                  ? 'bg-[#ffdadb] text-[#6c1725] font-semibold' 
-                  : 'text-[#5e4f4f] hover:bg-[#f0eded] hover:text-[#6c1725]'
+              className={`w-full text-start px-4 py-2.5 text-sm transition-colors ${
+                locale === loc
+                  ? 'bg-[var(--stamp-tint)] text-[var(--stamp)] font-semibold'
+                  : 'text-[var(--ink-soft)] hover:bg-[var(--surface-container-low)] hover:text-[var(--folder)]'
               }`}
               role="option"
               aria-selected={locale === loc}

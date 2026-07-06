@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Manrope } from 'next/font/google'
+import { Fraunces, Public_Sans, IBM_Plex_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
@@ -7,15 +7,23 @@ import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import './globals.css'
 
-const inter = Inter({ 
+const fraunces = Fraunces({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-fraunces',
+  display: 'swap',
+  axes: ['opsz', 'SOFT', 'WONK'],
+})
+
+const publicSans = Public_Sans({
+  subsets: ['latin'],
+  variable: '--font-public-sans',
   display: 'swap',
 })
 
-const manrope = Manrope({ 
+const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
-  variable: '--font-manrope',
+  weight: ['400', '500', '600'],
+  variable: '--font-plex-mono',
   display: 'swap',
 })
 
@@ -43,7 +51,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#8B2E3A',
+  themeColor: '#35493D',
   width: 'device-width',
   initialScale: 1,
 }
@@ -73,7 +81,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html 
       lang={locale} 
       dir={isRTL ? 'rtl' : 'ltr'}
-      className={`${inter.variable} ${manrope.variable} bg-[#fcf9f8]`}
+      className={`${fraunces.variable} ${publicSans.variable} ${plexMono.variable} bg-[#F1ECDC]`}
     >
       <body className="font-sans antialiased">
         <NextIntlClientProvider messages={messages}>

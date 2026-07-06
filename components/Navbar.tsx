@@ -12,54 +12,49 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: '#services', label: t('services') },
-    { href: '#tarifs', label: t('pricing') },
-    { href: '#comment-ca-marche', label: t('howItWorks') },
-    { href: '#contact', label: t('contact') },
+    { href: '#services', label: t('services'), code: 'S' },
+    { href: '#tarifs', label: t('pricing'), code: 'T' },
+    { href: '#comment-ca-marche', label: t('howItWorks'), code: 'P' },
+    { href: '#contact', label: t('contact'), code: 'C' },
   ]
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 10)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-[#fcf9f8]/95 backdrop-blur-xl shadow-sm'
-        : 'bg-[#fcf9f8]/90 backdrop-blur-xl'
-      }`}>
-      <div className="flex justify-between items-center px-6 md:px-10 py-4 md:py-6 w-full max-w-full mx-auto">
-        <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <Image
-            src="/images/logo.png"
-            alt="Laila Rezzougui"
-            width={40}
-            height={40}
-            className="h-10 w-auto"
-          />
-          <span className="text-xl font-extrabold tracking-tight text-[#8B2E3A] font-[var(--font-manrope)]">
+    <header
+      className={`fixed top-0 w-full z-50 border-b transition-all duration-300 ${
+        isScrolled ? 'bg-[var(--paper)]/95 backdrop-blur-md border-[var(--line)]' : 'bg-[var(--paper)] border-transparent'
+      }`}
+    >
+      <div className="flex justify-between items-center px-4 sm:px-6 md:px-10 py-3.5 sm:py-4 md:py-5 w-full max-w-full mx-auto">
+        <a href="#" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity min-w-0">
+          <Image src="/images/logo.png" alt="Laïla Rezzougui" width={32} height={32} className="h-8 sm:h-9 w-auto flex-shrink-0" />
+          <span className="text-base sm:text-lg md:text-xl font-semibold tracking-tight text-[var(--folder)] font-[var(--font-headline)] truncate">
             Laïla Rezzougui
           </span>
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6 items-center">
+        {/* Desktop Navigation — folder-tab style */}
+        <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-[#5e4f4f] hover:text-[#6c1725] transition-colors duration-200 font-[var(--font-manrope)] text-sm tracking-tight font-medium"
+              className="group flex items-center gap-1.5 px-3.5 py-2 rounded-t-md text-[var(--ink-soft)] hover:text-[var(--folder)] transition-colors text-sm font-medium"
             >
+              <span className="ref-label text-[10px] text-[var(--stamp)]/70">{link.code}</span>
               {link.label}
             </a>
           ))}
+          <span className="w-px h-5 bg-[var(--line)] mx-2" />
           <LanguageSwitcher />
           <a
             href="#contact"
-            className="bg-[#6c1725] hover:bg-[#8b2e3a] text-white px-6 py-2.5 rounded-xl font-[var(--font-manrope)] text-sm tracking-tight font-semibold transition-colors"
+            className="ml-2 bg-[var(--folder)] hover:bg-[var(--folder-light)] text-[var(--on-primary)] px-5 py-2.5 rounded-md text-sm font-semibold tracking-tight transition-colors"
           >
             {t('cta')}
           </a>
@@ -70,32 +65,32 @@ export default function Navbar() {
           <LanguageSwitcher />
           <button
             aria-label={isMenuOpen ? t('closeMenu') : t('openMenu')}
-            className="text-[#8B2E3A] p-2 focus:outline-none"
+            className="text-[var(--folder)] p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--folder)] rounded-md"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-[#fcf9f8] border-t border-[#dcc0c1] px-6 py-4">
-          <div className="flex flex-col gap-4">
+        <nav className="md:hidden bg-[var(--paper)] border-t border-[var(--line)] px-6 py-4">
+          <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-[#5e4f4f] hover:text-[#6c1725] transition-colors duration-200 font-[var(--font-manrope)] text-base font-medium py-2"
+                className="flex items-center gap-2 text-[var(--ink-soft)] hover:text-[var(--folder)] transition-colors text-base font-medium py-2.5 border-b border-[var(--line)]/60"
               >
+                <span className="ref-label text-[10px] text-[var(--stamp)]/70">{link.code}</span>
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
               onClick={() => setIsMenuOpen(false)}
-              className="bg-[#6c1725] hover:bg-[#8b2e3a] text-white px-6 py-3 rounded-xl font-[var(--font-manrope)] text-sm tracking-tight font-semibold transition-colors text-center mt-2"
+              className="bg-[var(--folder)] text-[var(--on-primary)] px-6 py-3 rounded-md text-sm font-semibold tracking-tight transition-colors text-center mt-4"
             >
               {t('cta')}
             </a>

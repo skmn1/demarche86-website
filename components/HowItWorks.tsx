@@ -6,52 +6,28 @@ export default function HowItWorks() {
   const t = useTranslations('HowItWorks')
 
   const steps = [
-    {
-      number: 1,
-      title: t('step1Title'),
-      description: t('step1Desc'),
-    },
-    {
-      number: 2,
-      title: t('step2Title'),
-      description: t('step2Desc'),
-    },
-    {
-      number: 3,
-      title: t('step3Title'),
-      description: t('step3Desc'),
-    },
+    { number: '01', title: t('step1Title'), description: t('step1Desc') },
+    { number: '02', title: t('step2Title'), description: t('step2Desc') },
+    { number: '03', title: t('step3Title'), description: t('step3Desc') },
   ]
 
   return (
-    <section id="comment-ca-marche" className="py-24 lg:py-32 bg-[#f6f3f2] px-6 lg:px-20">
+    <section id="comment-ca-marche" className="py-14 sm:py-20 lg:py-28 bg-[var(--folder)] px-5 sm:px-6 lg:px-20 text-[var(--on-primary)]">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16 md:mb-24 text-center max-w-2xl mx-auto">
-          <h2 className="font-[var(--font-manrope)] text-3xl md:text-4xl font-extrabold text-[#1b1b1b] mb-4">
-            {t('title')}
-          </h2>
-          <p className="text-[#554243] text-lg">
-            {t('subtitle')}
-          </p>
+        <div className="mb-10 sm:mb-16 md:mb-20 max-w-2xl">
+          <span className="ref-label text-[10px] sm:text-[11px] text-[var(--marker)]">La procédure, étape par étape</span>
+          <h2 className="font-[var(--font-headline)] text-2xl sm:text-3xl md:text-4xl font-medium mt-2 mb-3 sm:mb-4">{t('title')}</h2>
+          <p className="text-[var(--on-primary)]/75 text-base sm:text-lg">{t('subtitle')}</p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-          {/* Connector line for desktop */}
-          <div className="hidden md:block absolute top-10 left-[calc(16.67%+2.5rem)] right-[calc(16.67%+2.5rem)] h-1 bg-[#dcc0c1]/50 rounded-full z-0" />
-          
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/15 rounded-sm overflow-hidden">
           {steps.map((step) => (
-            <div key={step.number} className="relative z-10 flex flex-col items-center text-center gap-6">
-              <div className="w-20 h-20 rounded-full bg-[#6c1725] text-white flex items-center justify-center text-3xl font-[var(--font-manrope)] font-bold">
+            <div key={step.number} className="bg-[var(--folder)] p-6 sm:p-8 md:p-10 flex flex-col gap-4 sm:gap-5">
+              <span className="font-[var(--font-headline)] text-4xl sm:text-5xl font-light text-[var(--marker)]">
                 {step.number}
-              </div>
-              <div>
-                <h3 className="font-[var(--font-manrope)] text-xl font-bold text-[#1b1b1b] mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-[#554243]">
-                  {step.description}
-                </p>
-              </div>
+              </span>
+              <h3 className="font-[var(--font-headline)] text-lg sm:text-xl font-medium">{step.title}</h3>
+              <p className="text-[var(--on-primary)]/75 leading-relaxed text-sm sm:text-base">{step.description}</p>
             </div>
           ))}
         </div>

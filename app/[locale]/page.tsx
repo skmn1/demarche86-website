@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-[72px] md:pt-[92px]">
+      <main className="pt-[60px] sm:pt-[68px] md:pt-[84px]">
         <Hero />
         <Services />
         <HowItWorks />

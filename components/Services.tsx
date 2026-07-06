@@ -7,65 +7,41 @@ export default function Services() {
   const t = useTranslations('Services')
 
   const services = [
-    {
-      icon: FileEdit,
-      title: t('service1Title'),
-      description: t('service1Desc'),
-    },
-    {
-      icon: FolderOpen,
-      title: t('service2Title'),
-      description: t('service2Desc'),
-    },
-    {
-      icon: Monitor,
-      title: t('service3Title'),
-      description: t('service3Desc'),
-    },
-    {
-      icon: Compass,
-      title: t('service4Title'),
-      description: t('service4Desc'),
-    },
-    {
-      icon: PhoneCall,
-      title: t('service5Title'),
-      description: t('service5Desc'),
-    },
-    {
-      icon: Mail,
-      title: t('service6Title'),
-      description: t('service6Desc'),
-    },
+    { code: '01', icon: FileEdit, title: t('service1Title'), description: t('service1Desc') },
+    { code: '02', icon: FolderOpen, title: t('service2Title'), description: t('service2Desc') },
+    { code: '03', icon: Monitor, title: t('service3Title'), description: t('service3Desc') },
+    { code: '04', icon: Compass, title: t('service4Title'), description: t('service4Desc') },
+    { code: '05', icon: PhoneCall, title: t('service5Title'), description: t('service5Desc') },
+    { code: '06', icon: Mail, title: t('service6Title'), description: t('service6Desc') },
   ]
 
   return (
-    <section id="services" className="py-24 lg:py-32 bg-[#fcf9f8] px-6 lg:px-20">
+    <section id="services" className="py-14 sm:py-20 lg:py-28 bg-[var(--paper)] px-5 sm:px-6 lg:px-20 border-t border-[var(--line)]">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16 md:mb-24 md:w-2/3 lg:w-1/2">
-          <h2 className="font-[var(--font-manrope)] text-3xl md:text-4xl font-extrabold text-[#1b1b1b] mb-4">
+        <div className="mb-10 sm:mb-14 md:mb-16 md:w-2/3 lg:w-1/2">
+          <span className="ref-label text-[10px] sm:text-[11px] text-[var(--stamp)]">Bordereau de services</span>
+          <h2 className="font-[var(--font-headline)] text-2xl sm:text-3xl md:text-4xl font-medium text-[var(--ink)] mt-2 mb-3 sm:mb-4">
             {t('title')}
           </h2>
-          <p className="text-[#554243] text-lg">
-            {t('subtitle')}
-          </p>
+          <p className="text-[var(--ink-soft)] text-base sm:text-lg">{t('subtitle')}</p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-[var(--line)]">
+          {services.map((service) => (
             <div
-              key={index}
-              className="bg-white p-8 rounded-2xl flex flex-col gap-4 group hover:bg-[#f6f3f2] transition-colors"
+              key={service.code}
+              className="p-6 sm:p-8 flex flex-col gap-3.5 sm:gap-4 border-r border-b border-[var(--line)] hover:bg-[var(--surface-container-low)] transition-colors"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#ffdadb] flex items-center justify-center text-[#6c1725] mb-2">
-                <service.icon className="w-6 h-6" />
+              <div className="flex items-center justify-between">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full stamp-ring flex items-center justify-center text-[var(--stamp)]">
+                  <service.icon className="w-5 h-5" />
+                </div>
+                <span className="ref-label text-[10px] sm:text-[11px] text-[var(--outline)]">{service.code}</span>
               </div>
-              <h3 className="font-[var(--font-manrope)] text-xl font-bold text-[#1b1b1b]">
+              <h3 className="font-[var(--font-headline)] text-lg sm:text-xl font-medium text-[var(--ink)]">
                 {service.title}
               </h3>
-              <p className="text-[#554243] leading-relaxed">
-                {service.description}
-              </p>
+              <p className="text-[var(--ink-soft)] leading-relaxed text-sm sm:text-[15px]">{service.description}</p>
             </div>
           ))}
         </div>
