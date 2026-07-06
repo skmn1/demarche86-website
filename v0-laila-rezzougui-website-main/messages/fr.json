@@ -1,0 +1,86 @@
+{
+  "Navbar": {
+    "services": "Services",
+    "pricing": "Tarifs",
+    "howItWorks": "Comment ça marche",
+    "contact": "Contact",
+    "cta": "Prendre rendez-vous",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "Hero": {
+    "badge": "Démarches à partir de 5 €",
+    "title": "Besoin d'aide pour vos démarches administratives?",
+    "description": "Je vous accompagne pour remplir vos papiers, comprendre vos courriers et faire valoir vos droits. Une aide simple, rapide et sans jargon.",
+    "callNow": "Appeler maintenant",
+    "viewServices": "Voir les services",
+    "tag1": "Indépendante",
+    "tag2": "Tarifs dès 5€",
+    "tag3": "Sans jargon",
+    "tag4": "À Poitiers"
+  },
+  "Services": {
+    "title": "Ce que je fais pour vous",
+    "subtitle": "Un accompagnement sur-mesure pour vous simplifier la vie quotidienne et vos relations avec les administrations.",
+    "service1Title": "Remplir vos papiers",
+    "service1Desc": "Aide à la constitution de dossiers et au remplissage de formulaires administratifs complexes.",
+    "service2Title": "Suivre vos dossiers",
+    "service2Desc": "Vérification de l'avancement de vos demandes et relances auprès des organismes concernés.",
+    "service3Title": "Démarches en ligne",
+    "service3Desc": "Assistance pour vos déclarations et demandes sur les plateformes gouvernementales (CAF, impôts, Ameli...).",
+    "service4Title": "Trouver le bon service",
+    "service4Desc": "Orientation vers les bons interlocuteurs et structures adaptés à votre situation spécifique.",
+    "service5Title": "Appeler les administrations",
+    "service5Desc": "Prise de contact téléphonique avec les services publics pour débloquer une situation ou obtenir des informations.",
+    "service6Title": "Expliquer vos courriers",
+    "service6Desc": "Traduction en langage clair des courriers administratifs complexes et aide à la rédaction de réponses."
+  },
+  "HowItWorks": {
+    "title": "Comment ça se passe?",
+    "subtitle": "Un processus simple et transparent, conçu pour vous soulager rapidement.",
+    "step1Title": "Contactez-moi",
+    "step1Desc": "Par téléphone ou par message, expliquez-moi brièvement votre besoin.",
+    "step2Title": "On fait le point",
+    "step2Desc": "Nous évaluons ensemble la situation et je vous propose une solution adaptée et chiffrée.",
+    "step3Title": "Je m'en occupe",
+    "step3Desc": "Je prends en charge les démarches. Vous êtes informé à chaque étape importante."
+  },
+  "Pricing": {
+    "title": "Des tarifs pensés pour tous",
+    "subtitle": "Des prix transparents et accessibles pour que l'aide administrative ne soit pas un luxe.",
+    "badge": "Tarif de base",
+    "price": "À partir de 5 €",
+    "perUnit": "/ démarche simple",
+    "description": "Un devis clair et gratuit vous sera toujours proposé avant toute intervention. Pas de mauvaise surprise.",
+    "cta": "Me contacter pour un devis gratuit",
+    "feature1Title": "Aide au remplissage",
+    "feature1Desc": "Formulaires simples (CAF, CPAM...)",
+    "feature2Title": "Rédaction de courrier",
+    "feature2Desc": "Lettre type ou personnalisée simple",
+    "feature3Title": "Appel administratif",
+    "feature3Desc": "Prise de contact en votre nom",
+    "feature4Title": "Dossiers complexes",
+    "feature4Desc": "Sur devis selon le temps estimé"
+  },
+  "Contact": {
+    "title": "Me contacter",
+    "subtitle": "N'hésitez pas à me joindre pour toute question ou pour prendre un premier rendez-vous d'évaluation.",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "hours": "Horaires",
+    "hoursValue": "Sur rendez-vous uniquement",
+    "hoursExtra": "Contactez-moi pour convenir d'un créneau",
+    "cta": "Prendre rendez-vous",
+    "mapLabel": "Poitiers et environs"
+  },
+  "Footer": {
+    "description": "Assistante Sociale Indépendante. Accompagnement dans vos démarches administratives du quotidien.",
+    "copyright": "© 2026 Laïla Rezzougui - Assistante Sociale Indépendante.",
+    "siret": "SIRET 529 362 741 000 25",
+    "navigation": "Navigation",
+    "legal": "Légal",
+    "legalNotice": "Mentions Légales",
+    "privacy": "Confidentialité"
+  }
+}
